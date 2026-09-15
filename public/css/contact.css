@@ -1,92 +1,92 @@
 .outer-container {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .contact-btn {
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .contact-btn:hover {
-    background-color: transparent;
-    color: #007bff;
-    border-color: #007bff;
+  background-color: transparent;
+  color: #007bff;
+  border-color: #007bff;
 }
 
 .dento-contact-area .contact-btn:hover {
-    border-color: #007bff;
+  border-color: #007bff;
 }
 
 @media (max-width: 576px) {
-    .contact-btn {
-        width: 100px;
-        font-size: 10px;
-    }
+  .contact-btn {
+    width: 100px;
+    font-size: 10px;
+  }
 }
 
 @media (min-width: 992px) {
-    .contact-btn {
-        width: 200px;
-    }
+  .contact-btn {
+    width: 200px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .contact-btn {
-        width: 250px;
-    }
+  .contact-btn {
+    width: 250px;
+  }
 }
 
 .contact-form {
-    position: relative;
+  position: relative;
 }
 .contact-form .form-control {
-    width: 100%;
-    height: 46px;
-    padding: 0 15px;
-    margin: 5px;
-    font-size: 13px;
-    font-style: italic;
+  width: 100%;
+  height: 46px;
+  padding: 0 15px;
+  margin: 5px;
+  font-size: 13px;
+  font-style: italic;
 }
 .contact-form .form-control:focus {
-    box-shadow: none;
-    border-color: #00aeef;
+  box-shadow: none;
+  border-color: #00aeef;
 }
 .contact-form textarea.form-control {
-    height: 110px;
-    padding: 15px;
+  height: 110px;
+  padding: 15px;
 }
 
 .dento-contact-area {
-    position: relative;
+  position: relative;
 }
 
 .contact-information {
-    position: relative;
-    padding: 30px 50px;
-    background: linear-gradient(45deg, #0056b3, #007bff);
-    border-radius: 3px;
-    color: #fff;
+  position: relative;
+  padding: 30px 50px;
+  background: linear-gradient(45deg, #0056b3, #007bff);
+  border-radius: 3px;
+  color: #fff;
 }
 
 @media only screen and (max-width: 767px) {
-    .contact-information {
-        margin-bottom: 100px;
-    }
-    .contact-information h5 {
-        color: #ffffff;
-    }
-    .contact-information p {
-        color: #ffffff;
-    }
+  .contact-information {
+    margin-bottom: 100px;
+  }
+  .contact-information h5 {
+    color: #ffffff;
+  }
+  .contact-information p {
+    color: #ffffff;
+  }
 }
 .custom-line {
-    width: 10%;
-    height: 2px;
-    background-color: #007bff;
-    margin: 10px auto;
-    border-radius: 10px;
+  width: 10%;
+  height: 2px;
+  background-color: #007bff;
+  margin: 10px auto;
+  border-radius: 10px;
 }

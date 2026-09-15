@@ -5,22 +5,24 @@
   color: red;
 }
 .flash-messages {
-  width: 100%; /* Match the width of the column */
-  max-width: 600px; /* Limit the width */
-  margin: 0 auto 20px auto; /* Center horizontally and add bottom margin */
-  text-align: center; /* Center text inside */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
 .alert {
-  margin-bottom: 0; /* Remove default margin */
-  padding: 10px 15px; /* Adjust padding for better appearance */
-  border-radius: 5px; /* Optional: Rounded corners */
+  margin-bottom: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .slider_area {
   position: relative;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/images/banner.png') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("/images/banner.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +38,14 @@
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .recepie_area {
@@ -149,7 +157,8 @@
   color: #333;
 }
 
-.single_recepie span, .single_recepie p {
+.single_recepie span,
+.single_recepie p {
   color: #666;
   font-size: 14px;
   margin-top: 5px;
@@ -178,15 +187,16 @@
   border-color: #2980b9;
 }
 
-.line_btn:focus, .line_btn:active {
+.line_btn:focus,
+.line_btn:active {
   outline: none;
   box-shadow: 0 0 5px 3px rgba(41, 128, 185, 0.5);
 }
 
 @media (max-width: 991px) {
   .single_recepie {
-      flex: 1 1 100%;
-      max-width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
@@ -237,15 +247,18 @@
 }
 
 @media (max-width: 991px) {
-  .single_recepie, .single_dish {
-      width: 100%;
+  .single_recepie,
+  .single_dish {
+    width: 100%;
   }
 }
 
 .latest_trand_area {
   position: relative;
   padding: 80px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/bradcam.png') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/images/bradcam.png") center/cover no-repeat;
   color: #fff;
   text-align: center;
 }
@@ -270,7 +283,10 @@
   font-weight: bold;
   border: 2px solid #3498db;
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .boxed-btn3:hover {
@@ -279,17 +295,16 @@
   border-color: #3498db;
 }
 
-
 @media (max-width: 991px) {
   .slider_text h3 {
-      font-size: 40px;
+    font-size: 40px;
   }
 
   .dish_wrap {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .latest_trand_area h3 {
-      font-size: 30px;
+    font-size: 30px;
   }
 }

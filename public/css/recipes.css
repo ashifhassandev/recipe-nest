@@ -1,87 +1,93 @@
 .recipe-details h2 {
-    font-size: 28px;
-    color: #333;
+  font-size: 28px;
+  color: #333;
 }
 
 .recipe-info {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
-
 .recipe-info p {
-    color: #666;
-    font-size: 16px;
-    margin: 6px 0;
+  color: #666;
+  font-size: 16px;
+  margin: 6px 0;
 }
 
 .recipe-img img {
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .modern-box {
-    background: linear-gradient(145deg, #f0f0f3, #d4d4d8);
-    box-shadow: 5px 5px 15px #babec3, -5px -5px 15px #ffffff;
-    border-radius: 12px;
-    color: #333;
-    margin-bottom: 80px;
+  background: linear-gradient(145deg, #f0f0f3, #d4d4d8);
+  box-shadow:
+    5px 5px 15px #babec3,
+    -5px -5px 15px #ffffff;
+  border-radius: 12px;
+  color: #333;
+  margin-bottom: 80px;
 }
 
 .ingredients-box {
-    margin-bottom: 40px !important;
+  margin-bottom: 40px !important;
 }
 
-.ingredients-box h3, .instructions-box h3 {
-    font-size: 24px;
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+.ingredients-box h3,
+.instructions-box h3 {
+  font-size: 24px;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
 }
 
-.ingredients-box ul, .instructions-box ol {
-    color: #555;
-    font-size: 16px;
-    padding-left: 20px;
+.ingredients-box ul,
+.instructions-box ol {
+  color: #555;
+  font-size: 16px;
+  padding-left: 20px;
 }
 
-.ingredients-box ul li, .instructions-box ol li {
-    padding: 5px 0;
-    border-bottom: 1px dashed #ccc;
+.ingredients-box ul li,
+.instructions-box ol li {
+  padding: 5px 0;
+  border-bottom: 1px dashed #ccc;
 }
 
 .pagination-container {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .pagination {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pagination .page-item {
-    display: inline-block;
-    margin: 0 5px;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .pagination .page-link {
-    color: #007bff;
-    text-decoration: none;
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+  color: #007bff;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .pagination .page-link:hover {
-    background-color: #007bff;
-    color: #fff;
+  background-color: #007bff;
+  color: #fff;
 }
 
 .pagination .page-item.active .page-link {
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
 }

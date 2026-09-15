@@ -1,184 +1,185 @@
 /* Global reset and base styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  a {
-    text-decoration: none;
-  }
-  
-  /* Header styles */
-  .header-area {
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 0;
-    transition: all 0.3s ease-in-out;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+}
 
-  .app-name {
-    font-size: 28px;
-    font-weight: bold;
-    color: lightseagreen;
-    letter-spacing: 1.5px;
-    transition: color 0.3s ease;
+/* Header styles */
+.header-area {
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: lightseagreen;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
 }
 
 .app-name:hover {
-    color: #85FF00;
+  color: #85ff00;
 }
 
-  
-  #sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .main-header-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Logo */
-  .logo img {
-    width: 10px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .logo img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Navigation menu styles */
+#sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-header-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  width: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation menu styles */
+.main-menu {
+  text-align: center;
+}
+
+.main-menu nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.main-menu nav ul li {
+  position: relative;
+}
+
+.main-menu nav ul li a {
+  color: #333;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+}
+
+.main-menu nav ul li a:hover {
+  color: #3498db;
+  transform: translateY(-2px);
+}
+
+.main-menu nav ul li a i {
+  margin-left: 5px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.main-menu nav ul li:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+.submenu li a:hover {
+  background-color: #f1f1f1;
+  color: #3498db;
+}
+
+/* Search icon */
+.search_icon a {
+  color: #333;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.search_icon a:hover {
+  color: #3498db;
+}
+
+/* Mobile menu styles */
+.mobile_menu {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
   .main-menu {
-    text-align: center;
-  }
-  
-  .main-menu nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    gap: 30px;
-  }
-  
-  .main-menu nav ul li {
-    position: relative;
-  }
-  
-  .main-menu nav ul li a {
-    color: #333;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 10px 20px;
-    display: block;
-    transition: color 0.3s, transform 0.3s;
-  }
-  
-  .main-menu nav ul li a:hover {
-    color: #3498db;
-    transform: translateY(-2px);
-  }
-  
-  .main-menu nav ul li a i {
-    margin-left: 5px;
-  }
-  
-  .submenu {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 10px 0;
-    z-index: 999;
-  }
-  
-  .main-menu nav ul li:hover .submenu {
-    display: block;
-  }
-  
-  .submenu li a {
-    padding: 10px 20px;
-    color: #333;
-    font-weight: 400;
-  }
-  
-  .submenu li a:hover {
-    background-color: #f1f1f1;
-    color: #3498db;
-  }
-  
-  /* Search icon */
-  .search_icon a {
-    color: #333;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .search_icon a:hover {
-    color: #3498db;
-  }
-  
-  /* Mobile menu styles */
-  .mobile_menu {
-    display: none;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 991px) {
-    .main-menu {
-      display: none;
-    }
-    
-    .mobile_menu {
-      display: block;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .main-header-area {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .main-menu nav ul {
-      flex-direction: column;
-      gap: 20px;
-    }
   }
 
-  .line_btn {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(45deg, #3498db, #2980b9);
-    border: 2px solid transparent;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    letter-spacing: 1px;
+  .mobile_menu {
+    display: block;
   }
-  
-  .line_btn:hover {
-    background: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    color: #2980b9;
-    border-color: #2980b9;
+}
+
+@media (max-width: 767px) {
+  .main-header-area {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .line_btn:focus, .line_btn:active {
-    outline: none;
-    box-shadow: 0 0 5px 3px rgba(41, 128, 185, 0.5);
+
+  .main-menu nav ul {
+    flex-direction: column;
+    gap: 20px;
   }
-  
+}
+
+.line_btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.line_btn:hover {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  color: #2980b9;
+  border-color: #2980b9;
+}
+
+.line_btn:focus,
+.line_btn:active {
+  outline: none;
+  box-shadow: 0 0 5px 3px rgba(41, 128, 185, 0.5);
+}
