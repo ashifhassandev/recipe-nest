@@ -1,20 +1,20 @@
 const showFlashMessages = ({
-    req,
-    res,
-    type = "error",
-    message = null,
-    status,
-    redirectUrl = null,
-    isJson = false,
-    success = false,
+  req,
+  res,
+  type = "error",
+  message = null,
+  status,
+  redirectUrl = null,
+  isJson = false,
+  success = false,
 }) => {
-    req.flash(type, message);
+  req.flash(type, message);
 
-    if (isJson) {
-        return res.status(status).json({ success });
-    }
+  if (isJson) {
+    return res.status(status).json({ success });
+  }
 
-    return res.status(status).redirect(redirectUrl);
+  return res.status(status).redirect(redirectUrl);
 };
 
 module.exports = showFlashMessages;

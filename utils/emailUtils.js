@@ -1,11 +1,15 @@
-const transporter = require("../config/emailConfig");
+const { Resend } = require("resend");
 
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Sends a contact form submission using Resend API.
 const sendEmail = async (name, email, message) => {
-    const mailOptions = {
-        from: process.env.SEND_EMAIL,
-        to: "faithfuldebates@gmail.com",
-        subject: "📬 New Message from RecipeNest Contact Form",
-        text: `
+  const { data, error } = await resend.emails.send({
+    from: "RecipeNest Contact <onboarding@resend.dev>",
+    to: [process.env.RECEIVER_EMAIL],
+    replyTo: email,
+    subject: "📬 New Message from RecipeNest Contact Form",
+    text: `
 Hello,
 
 You have received a new message through the RecipeNest Contact Us form:
@@ -22,16 +26,14 @@ ${message}
 Best regards,
 RecipeNest Notification System
         `,
-        replyTo: email,
-    };
+  });
 
-    try {
-        const info = await transporter.sendMail(mailOptions);
-        return info;
-    } catch (error) {
-        console.error("Email sending failed:", error);
-        throw new Error("Email sending failed");
-    }
+  if (error) {
+    console.error("Email sending failed:", error);
+    throw new Error(error.message);
+  }
+
+  return data;
 };
 
 module.exports = sendEmail;
