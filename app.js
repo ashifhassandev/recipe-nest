@@ -16,6 +16,7 @@ const expressLayouts = require("express-ejs-layouts");
 const { cleanupExpiredOtps } = require("./utils/otpUtils");
 
 const app = express();
+app.set("trust proxy", 1);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
