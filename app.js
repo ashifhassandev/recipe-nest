@@ -23,8 +23,11 @@ app.use(
   session({
     secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: false },
+    saveUninitialized: false,
+    cookie: { 
+      maxAge: 60 * 60 * 1000,
+      secure: process.env.NODE_ENV === "production"
+     },
   }),
 );
 app.use(cookieParser());
