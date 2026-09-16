@@ -19,12 +19,14 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(session({
+app.use(
+  session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false },
-}));
+  }),
+);
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(expressLayouts);
@@ -34,37 +36,39 @@ app.use(nocache());
 app.use(flash());
 app.use(methodOverride("_method"));
 
-app.use(cors({
-    origin: 'http://localhost:3000',
+app.use(
+  cors({
+    origin: "http://localhost:3000",
     credentials: true,
-}));
+  }),
+);
 
 app.use((req, res, next) => {
-    res.locals.successMessage = req.flash("success");
-    res.locals.errorMessage = req.flash("error");
-    next();
+  res.locals.successMessage = req.flash("success");
+  res.locals.errorMessage = req.flash("error");
+  next();
 });
 
 app.use((req, res, next) => {
-    const token = req.cookies.authToken;
+  const token = req.cookies.authToken;
 
-    if (token) {
-        try {
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+  if (token) {
+    try {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-            res.locals.isLoggedIn = true;
-            res.locals.username = `${decoded.firstName} ${decoded.lastName}`.trim();
-        } catch (error) {
-            console.error("Invalid token:", error.message);
+      res.locals.isLoggedIn = true;
+      res.locals.username = `${decoded.firstName} ${decoded.lastName}`.trim();
+    } catch (error) {
+      console.error("Invalid token:", error.message);
 
-            res.locals.isLoggedIn = false;
-            res.locals.username = null;
-        }
-    } else {
-        res.locals.isLoggedIn = false;
-        res.locals.username = null;
+      res.locals.isLoggedIn = false;
+      res.locals.username = null;
     }
-    next();
+  } else {
+    res.locals.isLoggedIn = false;
+    res.locals.username = null;
+  }
+  next();
 });
 
 const indexRoutes = require("./routes/indexRoutes");
@@ -76,28 +80,28 @@ app.use("/users", userRoutes);
 app.use("/otp", otpRoutes);
 
 app.use((req, res, next) => {
-    const locals = { title: "404 | Page Not Found" };
-    res.status(404).render("404", {
-        locals,
-        layout: "layouts/errorLayout",
-    });
+  const locals = { title: "404 | Page Not Found" };
+  res.status(404).render("404", {
+    locals,
+    layout: "layouts/errorLayout",
+  });
 });
 
 app.use((err, req, res, next) => {
-    console.error(err.stack);
+  console.error(err.stack);
 
-    const locals = { title: "500 | Internal Server Error" };
-    res.status(500).render("serverError", {
-        locals,
-        layout: "layouts/errorLayout",
-    });
+  const locals = { title: "500 | Internal Server Error" };
+  res.status(500).render("serverError", {
+    locals,
+    layout: "layouts/errorLayout",
+  });
 });
 
 cleanupExpiredOtps();
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = app;
