@@ -41,7 +41,7 @@ app.use(methodOverride("_method"));
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "https://recipe-nest-b24f.onrender.com",
     credentials: true,
   }),
 );
